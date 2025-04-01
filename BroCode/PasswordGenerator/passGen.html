@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./passGen.css">
+    <script src="./passgen.js" async></script>
+    <title>Password Generator</title>
+</head>
+
+<body>
+
+    <div id="container">
+        <div id="passDiv">
+            <h1>Password Generator</h1>
+
+            <label for=""> Password Digits : </label>
+            <input type="number" id="inpPass" value="1" min="1" max="10" style="border: none; padding:3px; width: 100px;"> <br><br>
+
+            <div id="selectType">
+                <h4>Please select password type :</h4> <br>
+                <input type="checkbox" id="lower">
+                <label for="lower">Lowercase</label><br><br>
+                <input type="checkbox" id="upper">
+                <label for="upper">Uppercase</label><br><br>
+                <input type="checkbox" id="number">
+                <label for="number">Number</label><br><br>
+                <input type="checkbox" id="symbol">
+                <label for="symbol">Symbol</label><br><br>
+            </div>
+
+            <button id="submit" onclick="passGenrator()">Submit</button> <br><br>
+
+            <h3 id="result"></h3>
+        </div>
+    </div>
+
+</body>
+
+</html>
