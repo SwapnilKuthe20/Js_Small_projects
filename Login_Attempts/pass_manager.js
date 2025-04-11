@@ -1,24 +1,24 @@
 // Loops :::
 
-let attemp = 3;
-let password = "swap20";
+// function passCheck() {
 
-while (attemp > 0) {
-    let userInp = prompt(" Enter your password");
+    let attemp = 3;
+    let password = "swap20";
 
-    if (password === userInp) {
-        console.log("Welcome ! Password is correct ");
-        break;
-    } else {
-        attemp--;
-        console.log(`YOur remailning attempts : ${attemp}`);
+    while (attemp > 0) {
+        let userInp = prompt(" Enter your password");
+
+        // let userInp = document.getElementById('enterPass').value;
+
+        if (password === userInp) {
+            document.getElementById('note').innerText = "Welcome ! Password is correct ";
+            break;
+        } else if (password !== userInp) {
+            document.getElementById('note').innerText = `Your remaining attempts : ${attemp}`;
+            
+            attemp--;
+        } else if (attemp === 0) {
+            document.getElementById('note').value = "Your attempts are gone ! pls try aftersome time";
+        }
     }
-
-    if (attemp === 0) {
-        console.log("Your attempts are gone ! pls try aftersome time");
-    }
-}
-
-
-
-
+// }
